@@ -17,7 +17,13 @@
                 </flux:navlist.group>
             </flux:navlist>
             <flux:navlist variant="outline">
-                    <flux:navlist.item icon="book-open-text" :href="route('hobby.index')" :current="request()->routeIs('Hobby')" wire:navigate>{{ __('Hobby') }}</flux:navlist.item>
+                    <flux:navlist.item icon="user" :href="route('siswa.index')" :current="request()->routeIs('siswa.index')" wire:navigate>{{ __('Siswa') }}</flux:navlist.item>
+            </flux:navlist>
+            <flux:navlist variant="outline">
+                    <flux:navlist.item icon="phone" :href="route('phone.index')" :current="request()->routeIs('phone.index')" wire:navigate>{{ __('Phone') }}</flux:navlist.item>
+            </flux:navlist>
+            <flux:navlist variant="outline">
+                    <flux:navlist.item icon="book-open-text" :href="route('hobby.index')" :current="request()->routeIs('hobby.index')" wire:navigate>{{ __('Hobby') }}</flux:navlist.item>
             </flux:navlist>
 
             <flux:spacer />
