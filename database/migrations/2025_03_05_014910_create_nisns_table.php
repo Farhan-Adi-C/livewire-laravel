@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('nisns', function (Blueprint $table) {
             $table->id();
-            $table->string('nisn')->unique();
+            $table->string('nisn');
             $table->foreignId('siswa_id')->constrained('siswas')->onDelete('cascade');
             $table->timestamps();
         });

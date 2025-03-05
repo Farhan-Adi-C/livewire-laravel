@@ -23,6 +23,7 @@ class Edit extends Component
     {
         $findSiswa = Siswa::findOrFail($this->siswaId);
         $findSiswa->name = $this->siswa;
+        $findSiswa->nisn()->update(['nisn' => $this->nisn]);
         $findSiswa->hobbies()->sync($this->hobbies);
         $findSiswa->save();
 
